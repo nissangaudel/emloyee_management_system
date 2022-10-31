@@ -1,0 +1,24 @@
+<div class="card-container">
+        <% for(count=0; count <=employee.length, count ++) { %>
+            <div class="longcard">
+                <div class="info-wrapper">
+                    <div class="right">
+                        <h3>
+                            <%= employee[count].firstName%>
+                        </h3>
+                        <p>
+                            <%= employee[count].employeeID %>
+                                <%= employee[count].gender %>
+                                    <%= employee[count].email %>
+                        </p>
+                    </div>
+                    <div class="left">
+                        <h3>
+                            <%= employee[count].payRate %>
+                        </h3>
+                    </div>
+                </div>
+                <div class="btn-update"><a href="#"><i class='bx bxs-pencil'></i></a></div>
+                <div class="btn-remove"><a href=""><i class='bx bx-trash'></i></a></div>
+            </div>
+            <% } %>

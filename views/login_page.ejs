@@ -1,0 +1,15 @@
+<%- include ('partials/_header') %>
+
+    <body class="container">
+        <div class="title-wrapper">
+            <h1>Who are you?</h1>
+            <p>Please enter your Name and Employee ID⬇️</p>
+        </div>
+        <form method="POST">
+            <input type="text" placeholder="Josh Phillipe" name="name">
+            <input type="text" placeholder="JP78" name="employeeid">
+            <input type="submit" value="<%= type %> "></input>
+        </form>
+    </body>
+
+    <%- include ('partials/_footer') %>

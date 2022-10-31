@@ -1,0 +1,90 @@
+<%- include ('partials/_header') %>
+
+    <body class="container">
+        <nav>
+            <p>CompanyName</p>
+        </nav>
+        <div class="title-section">
+            <div class="title-wrapper">
+                <h1>Enter Employee Details</h1>
+                <caption>**Fill out every field below**</caption>
+            </div>
+            <div class="weather-wrapper">
+                <p class="temp">loading...<br><span class="weather-status"></span></p>
+            </div>
+        </div>
+
+        <div class="main-wrapper-form-page">
+            <div class="main-wrapper-form">
+                <div class="input-wrapper">
+                    <form method="POST" id="update-employee">
+                        <div class="input-wrapper">
+                            <div class="name-group">
+                                <input type="hidden" name="id" value="<%= employee._id%>">
+                                <input type="text" name="firstName" id="" placeholder="First Name"
+                                    value="<%= employee.firstName %>">
+                                <input type="text" name="lastName" id="" placeholder="Last Name"
+                                    value="<%= employee.lastName %>">
+                            </div>
+                            <input type="email" name="email" id="" placeholder="Email Address"
+                                value="<%= employee.email %>">
+                            <div class="number-group-1">
+                                <input type="number" name="phoneNumber" id="" placeholder="Phone Number"
+                                    value="<%= employee.phoneNumber %>">
+                                <input type="text" name="employeeID" id="" placeholder="Employee ID"
+                                    value="<%= employee.employeeID %>">
+                            </div>
+                            <div class="radio-button-group">
+
+                                <label for="male" class="c-label">Male<input type="radio" value="male" name="gender"
+                                        id="male" <%=employee.gender=='male' ? 'checked' : '' %> ><span
+                                        class="checkmark"></span></label>
+
+                                <label for="female" class="c-label">Female<input type="radio" value="female"
+                                        name="gender" id="female" <%=employee.gender=='female' ? 'checked' : '' %> >
+                                    <span class="checkmark"></span></label>
+
+                                <label for="other" class="c-label">Other<input type="radio" value="other" name="gender"
+                                        id="other" <%=employee.gender=='other' ? 'checked' : '' %> ><span
+                                        class="checkmark"></span></label>
+                            </div>
+                            <div class="number-group-2">
+                                <input type="number" name="accountNumber" id="" placeholder="Bank A/C Number"
+                                    value="<%= employee.accountNumber %>">
+                                <input type="number" name="payRate" id="" placeholder="Pay/hr"
+                                    value="<%= employee.payRate %>" required>
+                            </div>
+                            <input type="submit" value="Add Employee">
+                        </div>
+                    </form>
+                </div>
+                <div class="quick-action-wrapper">
+                    <div class="card quick-action">
+                        <div class="quick-action-title">
+                            <h3>Quick Actions</h3>
+                        </div>
+                        <div class="btn pill">
+                            <p>View All</p>
+                        </div>
+                        <div class="btn pill">
+                            <p>Send Notice</p>
+                        </div>
+                        <div class="btn pill">
+                            <p>New Admin</p>
+                        </div>
+                        <div class="quic-action-title">
+                            <p>Log Out</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="time-wrapper">
+                    <p>9:28 PM<br>October 8, 2022 </p>
+                </div>
+                <div class="copyright">Designed & Devloped<br>Nishan Gaudel</div>
+            </div>
+        </div>
+
+    </body>
+    <%- include ('partials/_footer') %>

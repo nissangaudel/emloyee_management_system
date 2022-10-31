@@ -1,0 +1,57 @@
+<%- include ('partials/_header') %>
+
+    <body class="container">
+        <nav>
+            <p>CompanyName</p>
+        </nav>
+        <div class="title-section">
+            <div class="title-wrapper">
+                <h1>Welcome to Employee<br />Management Home🏠</h1>
+            </div>
+            <div class="weather-wrapper">
+                <p class="temp">loading...<br><span class="weather-status"></span></p>
+            </div>
+        </div>
+        <div class="main-wrapper">
+            <div class="card total-spending">
+                <h3>Total Spending<br>This Week<br><strong>$4500</strong></h3>
+            </div>
+            <div class="big-btn-wrapper">
+                <a href="/new_employee_form">
+                    <div class="card btn">
+                        <p>Add New Employee</p>
+                    </div>
+                </a>
+                <a href="/employee_list">
+                    <div class="card btn outline">
+                        <p>View All Employee</p>
+                    </div>
+                </a>
+            </div>
+            <div class="card quick-action">
+                <div class="quick-action-title">
+                    <h3>Quick Actions</h3>
+                </div>
+                <div class="btn pill">
+                    <p>View All</p>
+                </div>
+                <div class="btn pill">
+                    <p>Send Notice</p>
+                </div>
+                <div class="btn pill">
+                    <p>New Admin</p>
+                </div>
+                <div class="quic-action-title">
+                    <p>Log Out</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="time-wrapper">
+                <p>9:28 PM<br>October 8, 2022 </p>
+            </div>
+            <div class="copyright">Designed & Developed<br>Nishan Gaudel</div>
+        </div>
+    </body>
+
+    <%- include ('partials/_footer') %>

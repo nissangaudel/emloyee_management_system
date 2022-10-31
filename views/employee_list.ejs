@@ -1,0 +1,44 @@
+<%- include ('partials/_header') %>
+
+    <body class="container">
+        <nav>
+            <p>CompanyName</p>
+        </nav>
+        <div class="title-section">
+            <div class="title-wrapper">
+                <h1>List Of employee</h1>
+            </div>
+            <div class="weather-wrapper">
+                <p class="temp">loading...<br><span class="weather-status"></span></p>
+            </div>
+            <div class="card-container">
+                <% for(count=0; count <employee.length; count ++) { %>
+                    <div class="longcard">
+                        <div class="info-wrapper">
+                            <div class="right">
+                                <h3>
+                                    <%= employee[count].firstName + " " + employee[count].lastName%>
+                                </h3>
+                                <p>
+                                    <%= employee[count].employeeID %>
+                                        <%= employee[count].gender %>
+                                            <%= employee[count].email %>
+                                </p>
+                            </div>
+                            <div class="left">
+                                <h3>
+                                    <%= employee[count].payRate + "/hr" %>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="btn-update"><a href="/edit_employee/?id=<%= employee[count].employeeID %>"><i
+                                    class='bx bxs-pencil'></i></a></div>
+                        <div class="btn-remove" id="dltbutton"><a href="/remove_employee/<%= employee[count]._id %> "><i
+                                    class='bx bx-trash'></i></a></div>
+                    </div>
+                    <% } %>
+
+            </div>
+
+    </body>
+    <%- include ('partials/_footer') %>
